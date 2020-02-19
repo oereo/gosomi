@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+
+        <form id="login-form" method="post" action="{% url 'home' %}">
+            {% csrf_token %}
+            <label class="login">ID</label>
+            <input name="userid" type="text">
+            <label class="login">PASSWORD</label>
+            <input name="password" type="password">
+            <input type="submit" value="LogIn">
+        </form>
+        
+        <div class="wrapper_left">
+            <h1>Take countermeasures against malicious comments...</h1>
+            <p>악플악플악플악플악플악플악플시러시러시러시러시러시러시러시러시러시러</p>
+            <button type="button" class="btn btn-info">Info1</button>
+            <button type="button" class="btn btn-info">Info2</button>
+        </div>
+
+{% endblock %}

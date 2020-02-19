@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GOSOMI</title>
+
+    <link rel = "stylesheet" href = "../static/css/home.css">
+
+</head>
+<body>
+    <section> 
+        <div class="bg"></div>
+        <div class = "loginout_button">
+            {% if user.is_authenticated %}
+                <a href="{% url 'logout' %}" id="logout_button">Log Out</a> 
+            
+                {% else %}
+                    <a href="{% url 'signup' %}" id="signup_button">Sign Up</a>
+            {% endif%}
+        </div>
+        
+
+        <nav id = "navbar">
+            <ul>
+                <li class="nav-item">
+                    <a class = "navmenu" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class = "navmenu" href="#">악플러-고발게시판</a> 
+                </li>
+                <li class="nav-item">
+                    <a class = "navmenu" href="#">고소하기</a>
+                </li>
+                <li class="nav-item">
+                    <a class = "navmenu" href="#">마이페이지</a>
+                </li>
+            </ul>
+        </nav>
+        {%block content%}
+        {%endblock%}
+
+    </section>
+
+</body>
+</html>
