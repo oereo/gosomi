@@ -1,4 +1,55 @@
 {% extends 'home.html' %}
 {% block content %}
 
+<div class = "title">회원가입</div>
+<hr>
+
+
+<form class="signup-form" method='POST' action="{% url 'signup' %}">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td><label for="username">UserID</label></td>
+                <td><input type="text" class="form" id="username" placeholder="Username" required name="username"> <button id = "checkid"  style="display:inline; border-radius: 5px;background-color : #50bcdf;color:black">중복확인</button><br></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email <span class="text-muted">(필수)</span></label></td>
+                <td><input type="email" class="form" id="email" placeholder="you@example.com"required name="email"></td>
+            </tr>
+            <tr>
+                <td><label for="address">비밀번호</label></td>
+                <td><input type="password" class="form-control" id="address" placeholder="password" required name="password"></td>
+            </tr>
+            <tr>
+                <td><label for="address">비밀번호 확인</label></td>
+                <td><input type="password" class="form-control" id="address" placeholder="password" required name="password_confirm"></td>
+            </tr>
+            <tr>
+                <td><label for="country">Job</label></td>
+                <td>
+                    <select class="custom-select d-block w-100" id="job" required name="job">
+                        <option value="">Choose...</option>
+                        <option>대학생</option>
+                        <option>회사원</option>
+                        <option>의사</option>
+                      </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="state">지역</label></td>
+                <td>
+                    <select class="custom-select d-block w-100" id="location" required name="location">
+                        <option value="">Choose...</option>
+                        <option>부산</option>
+                        <option>경기도</option>
+                        <option>서울</option>
+                      </select>
+                </td>
+            </tr>
+            
+        </table>
+     
+        <button class="btn" type="submit" value="Sign Up"  style=" background-color : #50bcdf; width:150px;border:orange ">Sign Up</button>
+      
+</form>
 {% endblock %}

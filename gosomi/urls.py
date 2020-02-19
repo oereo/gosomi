@@ -22,4 +22,7 @@ urlpatterns = [
     path('', mainpage.views.home, name = "home"),
     path('logout/', mainpage.views.logout, name='logout'),
     path('signup/', mainpage.views.signup, name='signup'),
+    # path('assign/', mainpage.views.assign, name='assign'),
+
+    path('activate/<str:uid64>/<str:token>/', mainpage.views.activate, name='activate'),
 ]

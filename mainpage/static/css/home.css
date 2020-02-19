@@ -8,6 +8,7 @@ body{
     height:750px; 
     position: absolute; 
     top:60px; 
+    
 }
 
 /* navbar */
@@ -17,6 +18,7 @@ body{
     width : 70%;
     vertical-align: middle;
     text-align: center;
+    margin-bottom : 20px;
 } 
 
 
@@ -41,6 +43,7 @@ body{
  }
 
 section{ 
+   z-index : -100;
    background-image: url('../../static/img/배경.jpg'); 
    background-size:cover; 
    display:block; 
@@ -79,8 +82,7 @@ section h1{
 section p{ 
    margin-bottom: 20px; 
 } 
-
-section h1,p,a,button,#login-form,input{ 
+h1,p,a,button,#login-form,input, table{ 
    position: relative; 
    z-index:1000; 
    
@@ -98,4 +100,39 @@ section h1,p,a,button,#login-form,input{
     text-decoration:none;
 }
 
+table{
+    text-align : left;
+    width : 60%;
+    margin : auto;
+    margin-top : 50px;
+    border-spacing: 5px;
+    margin-bottom : 50px;
+}
 
+hr{
+    width : 80%;
+}
+
+
+/* signup form  */
+
+.signup-form{
+    text-align : center;
+    margin : auto;
+}
+
+.signup_area{
+    margin : 10px;
+    font-size : 15px;
+}
+
+.title{
+    font-size : 20px;
+    color : white;
+    text-align : center;
+    z-index : 1000;
+}
+
+.form{
+    width : 300px;
+}

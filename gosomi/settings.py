@@ -9,6 +9,14 @@ https://docs.djangoproject.com/en/3.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'dlstpgns0406@gmail.com' # ex) 관리자 메일
+EMAIL_HOST_PASSWORD =  ''# ex) 메일비밀번호
+SERVER_EMAIL = 'dlstpgns0406@gmail.com' # ex) dlstpgns0406@gmail.com
+DEFAULT_FROM_MAIL = 'dlstpgns'
 
 import os
 
